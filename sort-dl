@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# directory sort
+# GNU Affero General Public License v3.0
+
+eco() { echo -e "\n\n"; }
+directory=~/Downloads
+
+main() {
+	clear
+	cd $directory
+	eco
+	ls
+	eco
+	for item in *;
+	do 
+		if [[ "$item" = *.png ]]; 
+		then
+			mv_int $item photos;
+		elif [[ "$item" = *.jpg ]]; 
+		then
+			mv_int $item photos;
+		elif [[ "$item" = *.pdf ]];
+		then
+			mv_int $item pdf;
+		elif [[ "$item" = *.zip ]];
+		then 
+			mv_int $item zip;
+		elif [[ "$item" = *.mp3 ]];
+		then
+			mv_int $item mp3;
+		elif [[ "$item" = *.wav ]];
+		then
+			mv_int $item wav;
+		fi;
+	done
+	ls;
+}
+
+main
