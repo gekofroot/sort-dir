@@ -16,22 +16,22 @@ main() {
 	do 
 		if [[ "$item" = *.png ]]; 
 		then
-			mv_int $item photos;
+			mv -v $item photos;
 		elif [[ "$item" = *.jpg ]]; 
 		then
-			mv_int $item photos;
+			mv -v $item photos;
 		elif [[ "$item" = *.pdf ]];
 		then
-			mv_int $item pdf;
+			mv -v $item pdf;
 		elif [[ "$item" = *.zip ]];
 		then 
-			mv_int $item zip;
+			mv -v $item zip;
 		elif [[ "$item" = *.mp3 ]];
 		then
-			mv_int $item mp3;
+			mv -v $item mp3;
 		elif [[ "$item" = *.wav ]];
 		then
-			mv_int $item wav;
+			mv -v $item wav;
 		fi;
 	done
 	ls;
